@@ -1,0 +1,14 @@
+    # Python
+pdf-qa-project/venv/
+pdf-qa-project/__pycache__/
+pdf-qa-project/.env
+pdf-qa-project/*.pyc
+pdf-qa-project/chroma_db/
+
+# Node
+pdf-qa-frontend/node_modules/
+pdf-qa-frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
