@@ -3,7 +3,9 @@ services:
     name: pdf-qa-backend
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
     envVars:
       - key: GROQ_API_KEY
         sync: false
+      - key: FASTEMBED_CACHE_PATH
+        value: /tmp/fastembed_cache
