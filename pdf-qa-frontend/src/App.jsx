@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://pdf-qa-1-sek0.onrender.com/";
 
 export default function App() {
   const [file, setFile] = useState(null);
