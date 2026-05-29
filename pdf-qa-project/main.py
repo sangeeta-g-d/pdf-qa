@@ -6,13 +6,13 @@ app = FastAPI(title="PDF Q&A System")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://pdf-qa-mu.vercel.app"
-    ],
+    allow_origins=["*"],
+    allow_origin_regex=".*",
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 app.include_router(upload.router)
 app.include_router(query.router)
 
